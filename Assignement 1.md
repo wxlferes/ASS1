@@ -195,7 +195,18 @@ Pour tous ces parcours de listes, il est conseillé d'utiliser des noms de varia
 
 (ex4.1)=
 ### Exercice
-
+l=[2,5,8,120,14,3,12,16,14,12,20,1]
+mois=["Jan","Fev","Mar","Avr","Mai","Juin","Juillet","Aout","Sep","Oct","Nov","Dec"]
+def argmax(l):
+    v,k=l[0], 0
+    for i,e in enumerate(l):
+        if e >v:
+            v=e
+            k=i
+    return  v,k
+   
+v,k=argmax(l)
+print("Max vente :", v, "------->", mois[k])
 ```{admonition} Exercice 4.1 : Argmax
 Écrivez une fonction en Python qui permette de calculer l'argmax d'une liste, c'est-à-dire l'indice auquel est stockée la valeur maximale de la liste.
 Si cette valeur maximale est présente plusieurs fois dans la liste, on retournera l'indice de sa première occurrence.
